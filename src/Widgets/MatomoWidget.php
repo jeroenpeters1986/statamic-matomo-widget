@@ -8,7 +8,6 @@ use Statamic\Widgets\Widget;
 
 class MatomoWidget extends Widget
 {
-    protected static $handle = 'matomo_stats';
     protected static $cacheMinutes = 5;
 
     public function html()
@@ -20,13 +19,13 @@ class MatomoWidget extends Widget
                 return $this->fetchMatomoData();
             });
         } catch (\Exception $e) {
-            return view('widgets.matomo', [
+            return view('jeroenpeters1986::widgets.matomo', [
                 'error' => $e->getMessage(),
                 'config' => $config['widget'],
             ]);
         }
 
-        return view('widgets.matomo', [
+        return view('jeroenpeters1986::widgets.matomo', [
             'stats' => $stats,
             'config' => $config['widget'],
         ]);

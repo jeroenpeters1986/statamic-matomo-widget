@@ -7,16 +7,18 @@ use Jeroenpeters1986\MatomoWidget\Widgets\MatomoWidget;
 
 class ServiceProvider extends AddonServiceProvider
 {
-    protected $viewNamespace = 'jeroenpeters1986';
-
     protected $widgets = [
         MatomoWidget::class
     ];
 
-    public function boot()
+    public function bootAddon()
     {
-        $this->publishes([
-            __DIR__.'/../config/statamic/matomo_widget.php' => config_path('statamic/matomo_widget.php'),
-        ]);
+        $this->mergeConfigFrom(__DIR__.'/../config/statamic/matomo_widget.php', 'statamic.matomo_widget');
+
+        if ($this->app->runningInConsole()) {
+            $this->publishes([
+                __DIR__.'/../config/statamic/matomo_widget.php' => config_path('statamic/matomo_widget.php'),
+            ], 'matomo-widget-config');
+        }
     }
 }

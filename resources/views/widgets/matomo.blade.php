@@ -9,7 +9,7 @@
         @if(isset($error))
             <p class="text-lg font-bold mb-2">{{ $error }}</p>
         @else
-            <canvas id="matomoStatsChart" height="{{ $config['chart_height'] }}"></canvas>
+            <canvas id="matomoStatsChart" height="300"></canvas>
         @endif
     </div>
 </div>
