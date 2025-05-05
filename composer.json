@@ -1,0 +1,31 @@
+{
+  "name": "jeroenpeters1986/statamic-matomo-widget",
+  "description": "Matomo stats by the dashboard light (widget)",
+  "keywords": ["statamic", "matomo", "analytics", "widget"],
+  "homepage": "https://jeroenpeters.dev/english/software-projects",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Jeroenpeters1986\\MatomoWidget\\": "src"
+    }
+  },
+  "authors": [
+    {
+      "name": "Jeroen Peters"
+    }
+  ],
+  "support": {
+    "email": "jeroenpeters1986@gmail.com"
+  },
+  "extra": {
+    "statamic": {
+      "name": "Matomo stats Widget",
+      "description": "Matomo stats by the dashboard light (widget)"
+    },
+    "laravel": {
+      "providers": [
+        "Jeroenpeters1986\\MatomoWidget\\ServiceProvider"
+      ]
+    }
+  }
+}
