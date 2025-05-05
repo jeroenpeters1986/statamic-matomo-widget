@@ -32,10 +32,19 @@ Add widget to control panel configuration `config/statamic/cp.php` file.
 e.g:
 ```php
 [
-	'type' => 'matomo_stats',
+	'type' => 'matomo',
 	'width' => 50,
 ],
 ```
+
+## Do your own customizations
+You can publish the config file with the following command:
+
+```bash
+php artisan vendor:publish --tag=statamic-matomo-widget
+```
+This will create a `config/statamic-matomo-widget.php` file where you can customize the widget.
+
 
 ## Support
 I love to share with the community. Nevertheless, coding/learning/updating takes a lot of work, time and effort.
@@ -45,6 +54,12 @@ this package, please create an issue on GitHub.
 If you like my software, feel free to [buy me a coffee or two with Ko-Fi](https://ko-fi.com/jeroenpeters)
 
 ## Changelog
+
+### 1.0.2
+Updated docs, reverted the viewNamespace, merged config
+
+### 1.0.1
+Added loading-stuff
 
 ### 1.0.0
 First version

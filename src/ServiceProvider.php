@@ -7,6 +7,8 @@ use Jeroenpeters1986\MatomoWidget\Widgets\MatomoWidget;
 
 class ServiceProvider extends AddonServiceProvider
 {
+    protected $viewNamespace = 'jeroenpeters1986';
+
     protected $widgets = [
         MatomoWidget::class
     ];
